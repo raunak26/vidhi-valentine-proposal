@@ -1,34 +1,70 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
+const phases = [
+  "No",
+  "Are you sure?",
+  "Really sure?",
+  "Think again!",
+  "Last chance!",
+  "Surely not?",
+  "You might regret this!",
+  "Give it another thought!",
+  "Are you absolutely certain?",
+  "This could be a mistake!",
+  "Have a heart!",
+  "Don't be so cold!",
+  "Change of heart?",
+  "Wouldn't you reconsider?",
+  "Is that your final answer?",
+  "You're breaking my heart ;(",
+];
+
 function App() {
-  const [count, setCount] = useState(0);
+  const [noCount, setNoCount] = useState(0);
+  const [yesPressed, setYesPressed] = useState(false);
+  const yesButtonSize = noCount * 20 + 16;
+
+  function handleNoClick() {
+    setNoCount(noCount + 1);
+  }
+
+  function getNoButtonText() {
+    return phases[Math.min(noCount, phases.length - 1)];
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="valentine-container">
+      {yesPressed ? (
+        <>
+          <img
+            alt="bears kissing"
+            src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif"
+          />
+          <div className="text">Ok yay!!!</div>
+        </>
+      ) : (
+        <>
+          <img
+            alt="bear with hearts"
+            src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+          />
+          <div>Will you be my Valentine?</div>
+          <div>
+            <button
+              className="yesButton"
+              style={{ fontSize: yesButtonSize }}
+              onClick={() => setYesPressed(true)}
+            >
+              Yes
+            </button>
+            <button onClick={handleNoClick} className="noButton">
+              {getNoButtonText()}
+            </button>
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 
