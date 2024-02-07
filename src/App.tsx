@@ -48,7 +48,7 @@ function App() {
           <p className="text4">
             To my favorite-st person in the world, <br />
             <br />
-            I love you to the center of the multiverse and back. Thought I'd
+            I love you to the end of the multiverse and back. Thought I'd
             show you much I love you through "code". I hoped you liked it
             because it's now part of my resume projects. <br />
             <br />
