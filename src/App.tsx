@@ -40,11 +40,11 @@ function App() {
           <img
             className="bear-kissing"
             alt="bears kissing"
-            src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif"
+            src="../ridhi2.JPG"
           />
           <div className="text1">YAYYYYY!!!</div>
-          <p className="text2">
-            To my favoritest person in the world, <br />
+          <p className="text4">
+            To my favorite-st person in the world, <br />
             <br />
             I love you to the center of the multiverse and back. Thought I'd
             show you much I love you through "code". I hoped you liked it
@@ -72,11 +72,11 @@ function App() {
           <img
             className="bear-heart"
             alt="bear with hearts"
-            src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+            src="../ridhi1.JPG"
           />
           <div className="text1">Dawu, will you be my Valentine?</div>
           <div className="text3">
-            (Try saying no, I dare you. No but actually try it hehe.)
+            (Try saying no, I dare you. No, but actually try it hehe.)
           </div>
           <div>
             <button
