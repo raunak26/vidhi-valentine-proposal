@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import ridhi1 from "./assets/ridhi1.JPG"
+import ridhi2 from "./assets/ridhi2.JPG"
 
 const phases = [
   "No",
@@ -40,7 +42,7 @@ function App() {
           <img
             className="bear-kissing"
             alt="bears kissing"
-            src="../ridhi2.JPG"
+            src={ridhi2}
           />
           <div className="text1">YAYYYYY!!!</div>
           <p className="text4">
@@ -72,7 +74,7 @@ function App() {
           <img
             className="bear-heart"
             alt="bear with hearts"
-            src="../ridhi1.JPG"
+            src={ridhi1}
           />
           <div className="text1">Dawu, will you be my Valentine?</div>
           <div className="text3">
